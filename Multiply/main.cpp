@@ -1,13 +1,25 @@
 #include <iostream>
+#include <fstream>
 
-float mal(float arg1, float arg2)
+int mal(int arg1, int arg2)
 {
 	return arg1 * arg2;
 }
 
-int main()
+int main(int argc, char** argv)
 {
-	float dardar = mal(1.41,1.41);
-	std::cout << "product is " << dardar << std::endl;
+	std::ifstream in("input.txt");
+
+	int value1;
+	int value2;
+
+	for(int( i = 0; i < 4 ; i++ );
+	{
+		in >> value1;
+		in >> value2;
+
+		int product = mal(value1, value2);
+		std::cout << "product is " << dardar << std::endl;
+	}
 	return 0;
 }
