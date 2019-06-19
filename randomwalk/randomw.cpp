@@ -36,10 +36,11 @@ int main()
     ortsbetrag[n] = summe/anzahl;
     quadratsbetrag[n] = quadratsumme/anzahl;
   }
+
   ofstream out("ortsbetrag.txt");
   for (int o=0; o<schritte; o++)
   {
-    out<<ortsbetrag[0]<<endl;
+    out<<ortsbetrag[o]<<endl;
   }
   ofstream arg("quadratsbetrag.txt");
   for (int o=0; o<schritte; o++)
