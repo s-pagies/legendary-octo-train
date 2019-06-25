@@ -46,7 +46,7 @@ int main()
 //Dichteberechnung am Ende aller Schritte
   for (int z=0; z<schritte; z++)
   {
-    for (int j=0; j<schritte; j++)
+    for (int j=0; j<anzahl; j++)
     {
       if (ortsvektor[j]=z){
 	dichte[z]++;}
