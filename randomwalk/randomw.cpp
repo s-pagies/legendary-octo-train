@@ -15,7 +15,7 @@ int main()
 //festlegen der Anzahlen von Schritten, Teilchen sowie der verschiedenen Vektoren
   int anzahl=1000000;
   vector<int> ortsvektor(anzahl,0);
-  int schritte=100;
+  int schritte=100; //für eine funktionierende Dichte hier eine grade Zahl wählen
   vector<float> ortsbetrag(schritte,0);
   vector<float> quadratsbetrag(schritte,0);
   int schritte2=schritte*2+1;
