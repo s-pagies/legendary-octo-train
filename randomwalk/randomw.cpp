@@ -18,6 +18,7 @@ int main()
   int schritte=100;
   vector<float> ortsbetrag(schritte,0);
   vector<float> quadratsbetrag(schritte,0);
+  int schritte2=schritte*2+1;
   vector<int> dichte(schritte,0);
 
 //Schleife über alle Schritte
@@ -44,13 +45,15 @@ int main()
   }
 
 //Dichteberechnung am Ende aller Schritte
-  for (int z=0; z<schritte; z++)
+  int u=-schritte/2;
+  for (int z=-schritte; z<schritte; z=z+2)
   {
     for (int j=0; j<anzahl; j++)
     {
-      if (ortsvektor[j]=z){
-	dichte[z]++;}
-    }  
+      if (ortsvektor[j]==u*2){
+	dichte[u+schritte/2]++;}
+    }
+     u++;  
   }
 //Schreiben der Ergebnisse in txt-Dateien
   ofstream out("ortsbetrag.txt");
