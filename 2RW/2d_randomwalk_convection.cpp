@@ -39,6 +39,6 @@ int main()
   ofstream out("ort.txt");
   for (int i=0; i<quantity; i++)
   {
-    out<<to_string(x_position[i]) + " " + to_string(y_position[i])<<endl;
+    out<<x_position[i]<<"\t"<<y_position[i]<<endl;
   }
 }
