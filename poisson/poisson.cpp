@@ -18,9 +18,9 @@ const int j = 50;
 const int k = 50;
 array<array<array<double,i+1>,j+1>,k+1> grid;
 
-double steps  = 4000; //number of iteration steps
+double steps  = 8000; //number of iteration steps
 double fehler = 0.01;
-int fall      = 0; 
+int fall      = 1; 
 // fall = 0 gives a charged plate (upper boundary gridpoints)
 // fall = 1 gives a single charged gridpoint a fixed charge
 bool neumann  = 1;
