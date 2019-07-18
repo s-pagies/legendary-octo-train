@@ -13,14 +13,14 @@ double constant	  = rho/epsilon;
 double sixth	  = 1.0/6.0;
 
 // define 3D tensor
-const int i = 100;
-const int j = 100;
-const int k = 100;
+const int i = 80;
+const int j = 80;
+const int k = 80;
 array<array<array<double,i+1>,j+1>,k+1> grid;
 
 double steps  = 8000; //maximum number of iteration steps
 double minimum_number_of_steps = 500; // speaks for itself
-double fehler = 0.1;
+double fehler = 0.05;
 int fall      = 0; 
 // fall = 0 gives a charged plate (upper boundary gridpoints)
 // fall = 1 gives a single charged gridpoint a fixed charge
