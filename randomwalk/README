@@ -1,0 +1,8 @@
+IMG_1005 stellt die Dichteverteilung der Teilchen am Ende von 100 Schritten dar.
+Als schwarze Punkte sind die Werte des Programs und als blaue Linie die theoreische Kurve (siehe Skript zur Vorlesung) dargestellt.
+
+IMG_1006 stellt das den Mittelwert des quadratischen Abstands über die Zeitschritte aufgetragen dar.
+Es ist gut zu erkennen, das die Punkte der Gerade y=x folgen, genau wie bei D=0,5 zu erwarten wäre.
+
+IMG_1007 stellt den Mittelwert des Abstandes der Teilchen über die Zeitschritte aufgetragen dar.
+Wie zu erwarten bewegt sic dieser Graph nicht weit von 0 weg - die größte Abweichung im Verlauf von 100 Schritten beträgt unter 0,015 Schritten.
