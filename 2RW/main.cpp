@@ -1,5 +1,5 @@
 /*
-________________________________________________
+
 CP2 - PROJEKT: KONEVKTIONS-DIFFUSIONS-GLEICHUNG
 P. F. Giesel, M. Neumann
 Last Update: 09.07.2019
@@ -328,12 +328,12 @@ int main()
                 }
             }
 	    
-	    float gx_2 = gridpoints_x*0.5
+	    float gx_2 = gridpoints_x*0.5;
             if(diffusion==true)
             {
 	      if(x_pos[n]<=2)
 	      {
-		if(y_pos[n]>=a && y_pos<=gridpoints_y-a)
+		if(y_pos[n]>=a && y_pos[n]<=gridpoints_y-a)
 		{
 		  y_pos[n] += -v;
 		}
@@ -358,7 +358,7 @@ int main()
 	      }
 	      if(x_pos[n]>gx_2 && x_pos[n]<= gx_2+2)
 	      {
-		if(y_pos[n]>=a && y-pos[n]<=gridpoints_y-a)
+		if(y_pos[n]>=a && y_pos[n]<=gridpoints_y-a)
 		{
 		  y_pos[n] += v;
 		}

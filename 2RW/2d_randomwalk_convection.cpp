@@ -24,6 +24,7 @@ int main()
 //loop over all particles moving particles for each step
     for (int n=0; n<quantity; n++)
     {
+//random walk movement
       double zufall=dis(gen);
       if (zufall < 0.25){
 	x_position[n]++;}
@@ -32,6 +33,9 @@ int main()
       if (zufall >= 0.5 && zufall < 0.75){
 	y_position[n]++;}
       if (zufall >= 0.75){
+	y_position[n]--;}
+//convection movement
+      if (x_position[n] <= ?){
 	y_position[n]--;}
     }
   }

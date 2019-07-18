@@ -10,7 +10,7 @@ double epsilon_r  = 1;
 double epsilon	  = epsilon_0*epsilon_r;
 double rho	  = 0;
 double constant	  = rho/epsilon;
-double sixth	  = 1/6;
+double sixth	  = 1.0/6.0;
 
 // define 3D tensor
 const int i = 50;
@@ -18,9 +18,9 @@ const int j = 50;
 const int k = 50;
 array<array<array<double,i+1>,j+1>,k+1> grid;
 
-double steps  = 2000; //number of iteration steps
+double steps  = 4000; //number of iteration steps
 double fehler = 0.01;
-int fall      = 1; 
+int fall      = 0; 
 // fall = 0 gives a charged plate (upper boundary gridpoints)
 // fall = 1 gives a single charged gridpoint a fixed charge
 bool neumann  = 1;
