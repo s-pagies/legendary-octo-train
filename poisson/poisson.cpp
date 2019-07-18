@@ -29,7 +29,7 @@ bool neumann  = 1;
 double charge_of_particle = -1000; // charge of gridpoint for fall 1
 
 double abort_condition = 1001;
-double some_value_for_accuaracy = 0.005;
+double some_value_for_accuaracy = 0.002;
 double number_of_executed_steps = 0;
 
 int main()
