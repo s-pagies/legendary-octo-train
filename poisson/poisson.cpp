@@ -13,36 +13,28 @@ double constant	  = rho/epsilon;
 double sixth	  = 1.0/6.0;
 
 // define 3D tensor
-const int i = 50;
-const int j = 50;
-const int k = 50;
+const int i = 100;
+const int j = 100;
+const int k = 100;
 array<array<array<double,i+1>,j+1>,k+1> grid;
 
-double steps  = 8000; //number of iteration steps
-double fehler = 0.01;
-int fall      = 1; 
+double steps  = 8000; //maximum number of iteration steps
+double minimum_number_of_steps = 500; // speaks for itself
+double fehler = 0.1;
+int fall      = 0; 
 // fall = 0 gives a charged plate (upper boundary gridpoints)
 // fall = 1 gives a single charged gridpoint a fixed charge
 bool neumann  = 1;
 // neumann = 0 deactivates neumann boundary condition -> same effect as a groundet boundary
 // neumann = 0 activates neumann boundary condition -> boundary acts as insulator
-double charge_of_particle = -1; // charge of gridpoint for fall 1
+double charge_of_particle = -1000; // charge of gridpoint for fall 1
 
+double abort_condition = 1001;
+double some_value_for_accuaracy = 0.01;
+double number_of_executed_steps = 0;
 
 int main()
 {
-  // create format.txt for plotting the data
-  ofstream out0("format.txt");
-  out0 << steps <<", " << i <<", " << j <<", " << k <<endl;
-  for(int e=0;e<i+1;e++)
-  {
-    for(int f=0;f<j+1;f++)
-    {
-      for(int g=0;g<k+1;g++){
-        grid[e][f][g] = 0;}
-    }
-  }
-
   if(fall==0) // fall 0 = charged plate as boundry condition
   {
     // defining output
@@ -86,6 +78,12 @@ int main()
 	  }
 	}
       }
+      number_of_executed_steps = d;
+      // abort condition
+      double wert  = abs(grid[i/2][j/2][k/2] - abort_condition);
+      if (wert<some_value_for_accuaracy && d>minimum_number_of_steps){
+	break;}
+      abort_condition = grid[i/2][j/2][k/2];
     }// end of steps
 
     // write results into txt-files
@@ -95,6 +93,18 @@ int main()
     {
       for(int bb=1;bb<j+1;bb++){
         out2d  << aa << ", " << bb << ", " << grid[aa][bb][k/2] << endl;}
+    }
+
+    // create format.txt for plotting the data (number of iteration steps, gridmeasurements)
+    ofstream out0("format.txt");
+    out0 << number_of_executed_steps <<", " << i <<", " << j <<", " << k <<endl;
+    for(int e=0;e<i+1;e++)
+    {
+      for(int f=0;f<j+1;f++)
+      {
+	for(int g=0;g<k+1;g++){
+	  grid[e][f][g] = 0;}
+      }
     }
   }// end fall==0
   else if(fall==1)
