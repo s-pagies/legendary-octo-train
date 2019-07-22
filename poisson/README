@@ -1,3 +1,7 @@
-1d_plate.png shows the course of the potential from top to bottom of the 3D grid at the center z axis of the cube.
+1d_plate.png shows the course of the potential from top to bottom of the 3D grid at the center z axis of the cube (blue circles).
+The red graph shows the theoretically expected curve.
+As the number of steps in the calculation increases the blue dots approaches the red line. 
+The calculation for this graphic was done with 8803 steps.
 
-2d_plate.png shows the course of the potential from top to bottom again.
+2d_plate.png shows the course of the potential from top to bottom again. But this time it is a 2D cut through the cube.
+Due to the Neumann boundary condition the edges of this graphic look just like the center.
