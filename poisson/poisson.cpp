@@ -27,7 +27,7 @@ int fall      = 1;
 bool neumann  = 1;
 // neumann = 0 deactivates neumann boundary condition -> same effect as a groundet boundary
 // neumann = 0 activates neumann boundary condition -> boundary acts as insulator
-double charge_of_particle = -1000; // charge of gridpoint for fall 1
+double charge_of_particle = -1.6022*pow(10,-19); // charge of gridpoint for fall 1
 
 int abort_method = 1;
 // abort_method = 0 compares the center gridpoint value between a timestep and the previous
