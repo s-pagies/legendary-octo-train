@@ -38,7 +38,7 @@ int abort_method = 1;
 //		    if computing time is very limited use method 0
 double abort_condition0 = 1001;
 double abort_condition1 = 0;
-double some_value_for_accuaracy = 0.002; // for abort_method = 0
+double some_value_for_accuaracy = 200; // for abort_method = 0, smaller values give more accurate results
 double accuracy_value = i*j*k*some_value_for_accuaracy; // for abort_method = 1
 double wert = accuracy_value+1;
 double sum_of_gridpoints = 0;
