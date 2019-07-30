@@ -5,3 +5,8 @@ The calculation for this graphic was done with 8803 steps.
 
 2d_plate.png shows the course of the potential from top to bottom again. But this time it is a 2D cut through the cube.
 Due to the Neumann boundary condition the edges of this graphic look just like the center.
+
+1d_point.png is similar to 1d_plate.png but it shows the course of the potential that is caused by a single charged point.
+The calculation was done with 4293 steps. (Abort condition stopped it there)
+
+2d_point.png is likewise similar to 2d_plate.png.
